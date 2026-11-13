@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- htmlaunch:enhanced:v2 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22hsl(81%2C72%25%2C58%25)%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22hsl(111%2C72%25%2C44%25)%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2C-apple-system%2CSegoe%20UI%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20fill%3D%22%23ffffff%22%3EG%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#145f7b">
+<meta name="description" content="GROK SIX | deployed with HTMLaunch">
+<link rel="canonical" href="https://alanruth2017-bit.github.io/grok-six/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GROK SIX">
+<meta property="og:title" content="GROK SIX">
+<meta property="og:description" content="GROK SIX | deployed with HTMLaunch">
+<meta property="og:url" content="https://alanruth2017-bit.github.io/grok-six/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Falanruth2017-bit.github.io%2Fgrok-six%2F?w=1200&h=630">
+<meta property="og:image:alt" content="GROK SIX">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GROK SIX">
+<meta name="twitter:description" content="GROK SIX | deployed with HTMLaunch">
+<meta name="twitter:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Falanruth2017-bit.github.io%2Fgrok-six%2F?w=1200&h=630">
+<meta name="twitter:image:alt" content="GROK SIX">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GROK SIX</title>
+  <!--
+    GROK SIX standalone desk.
+    Open this one file in a browser. The portrait clip and poster are embedded.
+    The clip is decorative and was supplied with the page. It is not market evidence.
+    A short phone-interface tail was removed from the loop.
+    Live pools, the paper ledger, workers, and Grok exist only on the GROK SIX server.
+    file:// stays empty of quotes and cannot fill orders. Same-origin serving may use /api.
+    Live trading is locked. No external fonts or CDNs.
+  -->
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --ink: #f4f1ea;
+      --muted: #a39e94;
+      --lime: #d6f25c;
+      --purple: #c9a6ff;
+      --blue: #9ec4ff;
+      --rose: #ff8d9c;
+      --line: rgb(244 241 234 / 0.16);
+      --surface: rgb(32 34 38 / 0.6);
+      --lime-a: rgb(214 242 92 / 0.6);
+      --purple-a: rgb(201 166 255 / 0.6);
+      --blue-a: rgb(158 196 255 / 0.6);
+      --rose-a: rgb(255 141 156 / 0.6);
+      --ink-a: rgb(244 241 234 / 0.6);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(900px 480px at 100% -10%, rgb(201 166 255 / 0.16), transparent 55%),
+        radial-gradient(700px 420px at -10% 20%, rgb(158 196 255 / 0.1), transparent 50%),
+        var(--bg);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    button, input { font: inherit; color: inherit; }
+    button { cursor: pointer; }
+    button:disabled { cursor: not-allowed; }
+    a { color: inherit; text-decoration: none; }
+    img, video { max-width: 100%; }
+    .serif { font-family: Palatino, "Palatino Linotype", "Iowan Old Style", Georgia, serif; }
+    .num { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
+    .lime { color: var(--lime); }
+    .rose { color: var(--rose); }
+    .blue { color: var(--blue); }
+    .purple { color: var(--purple); }
+    .muted { color: var(--muted); }
+
+    .page { width: min(1240px, calc(100% - 32px)); margin: 0 auto; }
+
+    header.mast {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-end;
+      padding: 28px 0 18px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; gap: 14px; align-items: center; }
+    .mark {
+      width: 42px; height: 42px;
+      display: grid; place-items: center;
+      background: var(--lime-a);
+      color: #111;
+      font-weight: 760;
+      letter-spacing: -0.04em;
+    }
+    .word { font-size: 13px; letter-spacing: 0.28em; font-weight: 650; }
+    .tag { margin: 2px 0 0; color: var(--muted); font-size: 12px; letter-spacing: 0.04em; }
+    .modes { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+    .pill, .btn {
+      border: 1px solid var(--ink-a);
+      background: transparent;
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .pill[aria-pressed="true"], .btn.solid {
+      background: var(--lime-a);
+      border-color: transparent;
+      color: #111;
+    }
+    .btn.danger { background: var(--rose-a); border-color: transparent; color: #111; }
+    .btn.rect { border-radius: 4px; letter-spacing: 0.12em; }
+    .btn:disabled, .pill:disabled {
+      background: var(--surface);
+      color: var(--ink);
+      border-color: var(--line);
+    }
+    nav.sections {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      padding: 14px 0 0;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    nav.sections a { padding-bottom: 8px; border-bottom: 1px solid transparent; white-space: nowrap; }
+    nav.sections a:hover { color: var(--ink); border-color: var(--lime); }
+
+    .collage {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(160px, 0.48fr) minmax(250px, 380px);
+      grid-template-rows: auto auto minmax(150px, 210px);
+      gap: 22px 28px;
+      padding: 34px 0 18px;
+      align-items: stretch;
+    }
+    .intro { grid-column: 1; grid-row: 1; align-self: end; padding-bottom: 8px; }
+    .eyebrow {
+      margin: 0 0 16px;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--purple);
+    }
+    h1 {
+      margin: 0;
+      font-weight: 500;
+      font-size: clamp(3.3rem, 7vw, 6.4rem);
+      line-height: 0.86;
+      letter-spacing: -0.035em;
+    }
+    h1 em { font-style: italic; font-weight: 500; }
+    .lede {
+      grid-column: 1;
+      grid-row: 2;
+      max-width: 38rem;
+      margin: 0;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+    .still {
+      overflow: hidden;
+      background: var(--surface);
+      min-height: 140px;
+    }
+    .still img, .portrait video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .still-a { grid-column: 1; grid-row: 3; }
+    .still-a img { height: 210px; object-position: 50% 78%; }
+    .still-b { grid-column: 2; grid-row: 1 / 3; margin-top: 72px; }
+    .still-b img { height: 100%; min-height: 240px; object-position: 72% 18%; }
+    .portrait {
+      grid-column: 3;
+      grid-row: 1 / 4;
+      position: relative;
+      background: #141414;
+      min-height: 520px;
+    }
+    .portrait video { position: absolute; inset: 0; object-position: center 12%; }
+    .play {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      z-index: 2;
+      background: rgb(11 12 15 / 0.6);
+      color: var(--ink);
+      border: 1px solid var(--ink-a);
+      border-radius: 999px;
+      padding: 7px 14px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    .typeblock {
+      grid-column: 2;
+      grid-row: 3;
+      align-self: end;
+      background: var(--surface);
+      padding: 16px 16px 14px;
+    }
+    .typeblock p { margin: 0; }
+    .typeblock .index {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--lime);
+    }
+    .typeblock .note { margin-top: 8px; font-size: 13px; color: var(--ink); }
+
+    .banner {
+      margin: 8px 0 0;
+      padding: 12px 14px;
+      background: var(--blue-a);
+      color: var(--ink);
+      font-size: 14px;
+    }
+    .banner.rose { background: var(--rose-a); color: #111; }
+    .desk { padding: 36px 0 72px; }
+    .figures {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 28px 20px;
+      padding: 8px 0 26px;
+      border-bottom: 1px solid var(--line);
+    }
+    .figures .label, .kicker {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .figures strong { display: block; margin-top: 8px; font-size: 1.7rem; font-weight: 500; letter-spacing: -0.03em; }
+    .figures .hint { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; }
+
+    .split-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin: 42px 0 8px;
+    }
+    h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+    .worker {
+      display: grid;
+      grid-template-columns: minmax(140px, 220px) 92px minmax(0, 1fr);
+      gap: 12px 18px;
+      align-items: baseline;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+    .worker .status {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 4px 0;
+      background: var(--surface);
+      color: var(--ink);
+    }
+    .worker .status.online { background: var(--lime-a); color: #111; }
+    .worker .status.idle, .worker .status.degraded, .worker .status.running { background: var(--blue-a); color: #111; }
+    .worker .status.offline, .worker .status.error { background: var(--rose-a); color: #111; }
+    .worker p { margin: 0; }
+    .worker .role { color: var(--muted); font-size: 13px; margin-top: 2px; }
+
+    .book {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.72fr);
+      gap: 42px;
+      margin-top: 18px;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th {
+      text-align: left;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500;
+      padding: 0 10px 8px 0;
+    }
+    td { padding: 11px 10px 11px 0; border-top: 1px solid var(--line); vertical-align: top; }
+    tr.click { cursor: pointer; }
+    tr.sel td { background: rgb(214 242 92 / 0.08); }
+    .ticket {
+      background: var(--surface);
+      padding: 22px 20px 20px;
+      align-self: start;
+    }
+    .ticket h2 { font-size: 1.7rem; }
+    .split { display: flex; gap: 8px; margin-top: 14px; }
+    .split > * { flex: 1; }
+    label.field { display: block; margin-top: 14px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      margin-top: 6px;
+      height: 40px;
+      border: 0;
+      border-bottom: 1px solid var(--ink-a);
+      background: transparent;
+      color: var(--ink);
+      padding: 0;
+      border-radius: 0;
+    }
+    .result { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 13px; }
+    .stack { display: grid; gap: 28px; margin-top: 48px; }
+    .finding { padding: 14px 0; border-top: 1px solid var(--line); }
+    .finding .who {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .rule { padding: 16px 0; border-top: 1px solid var(--line); }
+    .rule-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; margin-top: 10px; }
+    dialog {
+      width: min(34rem, calc(100% - 24px));
+      border: 0;
+      background: rgb(18 19 22 / 0.92);
+      color: var(--ink);
+      padding: 28px;
+    }
+    dialog::backdrop { background: rgb(0 0 0 / 0.6); }
+    dialog h3 { margin: 0 0 8px; font-size: 2rem; font-weight: 500; }
+    .usage { margin-top: 28px; color: var(--muted); font-size: 13px; max-width: 46rem; }
+    @media (max-width: 980px) {
+      .collage {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "video video"
+          "title title"
+          "lede lede"
+          "cloth heart"
+          "note note";
+        gap: 16px;
+      }
+      .portrait {
+        grid-area: video;
+        min-height: 0;
+        aspect-ratio: 9 / 16;
+        max-height: none;
+      }
+      .portrait video { object-position: center center; }
+      .intro { grid-area: title; }
+      .lede { grid-area: lede; max-width: none; }
+      .still-a { grid-area: cloth; }
+      .still-b { grid-area: heart; margin-top: 0; padding-top: 22px; background: transparent; }
+      .typeblock { grid-area: note; }
+      .still-a img, .still-b img { height: 148px; }
+      .book, .figures, .worker { grid-template-columns: 1fr; }
+      .worker { gap: 6px; }
+    }
+    @media (max-width: 640px) {
+      .page { width: min(100% - 28px, 1240px); }
+      header.mast { flex-direction: column; align-items: flex-start; }
+      .modes { justify-content: flex-start; }
+      h1 { font-size: 3.15rem; }
+      .figures strong { font-size: 1.45rem; }
+      .rule-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="mast">
+      <div class="brand">
+        <div class="mark serif">6</div>
+        <div>
+          <div class="word">GROK SIX</div>
+          <p class="tag">Solana paper desk</p>
+        </div>
+      </div>
+      <div class="modes">
+        <button class="pill" id="mode-paper" data-action="mode" data-mode="paper" disabled>Paper</button>
+        <button class="pill" id="mode-shadow" data-action="mode" data-mode="shadow" disabled>Shadow</button>
+        <button class="pill" disabled title="Live mode is not implemented">Live locked</button>
+        <button class="btn" id="kill-btn" data-action="kill" disabled>Kill switch</button>
+      </div>
+    </header>
+    <nav class="sections" aria-label="Sections">
+      <a href="#collage">Collage</a>
+      <a href="#book">Book</a>
+      <a href="#workers">Workers</a>
+      <a href="#markets">Markets</a>
+      <a href="#learning">Learning</a>
+      <a href="#rules">Rules</a>
+      <a href="#audit">Audit</a>
+    </nav>
+
+    <section class="collage" id="collage" aria-label="Supplied portrait">
+      <div class="intro">
+        <p class="eyebrow">A supplied portrait · not a signal</p>
+        <h1 class="serif">Paper,<br><em>kept quiet.</em></h1>
+      </div>
+      <p class="lede">GROK SIX is a paper desk for Solana pools. The portrait is a clip supplied with this page. It does not inform entries, exits, workers, or P&amp;L. Orders exist only when this file is served by the GROK SIX server.</p>
+      <figure class="still still-a">
+        <img src="assets/poster.jpg" alt="Still detail from the supplied portrait, cropped to the striped cloth.">
+      </figure>
+      <figure class="still still-b">
+        <img src="assets/poster.jpg" alt="Still detail from the supplied portrait, cropped toward the wall and floating hearts.">
+      </figure>
+      <figure class="portrait">
+        <video id="portrait" poster="assets/poster.jpg" muted loop playsinline preload="metadata">
+          <source src="assets/video.mp4" type="video/mp4">
+        </video>
+        <button class="play" id="play" type="button">Pause</button>
+      </figure>
+      <aside class="typeblock">
+        <p class="index">29s · muted</p>
+        <p class="note">Decorative loop. A phone-interface tail was cut. Pause stays on the frame, never over the type.</p>
+      </aside>
+    </section>
+
+    <main class="desk" id="desk"></main>
+
+    <dialog id="assumptions">
+      <h3 class="serif">Assumptions</h3>
+      <p>These describe the server’s paper model. This file does not price a fill by itself.</p>
+      <ul>
+        <li>Impact is order notional divided by pool liquidity. Buys pay above the mid. Sells receive below it.</li>
+        <li>If impact, fees, freshness, or the guardian fail, the server rejects the order. It does not invent a fill.</li>
+        <li>Shadow mode records a simulation and does not move cash.</li>
+        <li>Fill guarantee: false. Live trading is locked.</li>
+      </ul>
+      <form method="dialog"><button class="btn solid">Close</button></form>
+    </dialog>
+    <dialog id="kill-dialog">
+      <h3 class="serif" id="kill-title">Kill switch</h3>
+      <p class="muted">This calls the server. It does not touch a wallet.</p>
+      <label class="field">Reason<input id="kill-reason" type="text" autocomplete="off"></label>
+      <div class="split">
+        <button class="btn" type="button" data-action="close-kill">Cancel</button>
+        <button class="btn danger" type="button" data-action="confirm-kill">Confirm</button>
+      </div>
+    </dialog>
+  </div>
+<script>
+    const OFFLINE_AGENTS = [
+      ["Scout", "Ranks public Solana pools. Does not invent listings."],
+      ["Chart Analyst", "Reads fetched candles only. No candle, no claim."],
+      ["Whale Intelligence", "DEX counts and liquidity changes. No wallet names."],
+      ["Execution Specialist", "Paper fills only after the guardian. No autonomous entries."],
+      ["Risk & Security Guardian", "Veto on exposure, loss, freshness, and the kill switch."],
+      ["Quant Learning Engine", "Studies closed paper trades. Experiments stay isolated."]
+    ];
+    const RULE_DOCS = [
+      ["Market quality", "Liquidity, volume, and a real price, or no entry."],
+      ["Momentum confirmation", "More than one public signal before a new buy."],
+      ["Capital protection", "Size from paper equity. Stop after loss and exposure limits."],
+      ["Controlled execution", "Reject the fill when slippage, fees, or quote age break the cap."],
+      ["Exit discipline", "Stops and targets are tracked. Auto-exit stays a server setting."],
+      ["No trade is a valid trade", "A thin or weak tape keeps the desk in research."]
+    ];
+    const state = {
+      connected: false,
+      error: "Checking for a GROK SIX server on this origin.",
+      data: null,
+      selected: null,
+      side: "buy",
+      notional: "0.25",
+      quantity: "",
+      result: null,
+      killReason: "",
+      rulesDraft: null,
+      rulesDirty: false,
+      candles: null,
+      chartError: null,
+      busy: null,
+      hold: false,
+      dialog: null
+    };
+    const desk = document.getElementById("desk");
+
+    function esc(value) {
+      return String(value ?? "").replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
+    }
+    function num(value, digits) {
+      if (value == null || !Number.isFinite(Number(value))) return "—";
+      return Number(value).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: digits || 4 });
+    }
+    function pct(value) {
+      if (value == null || !Number.isFinite(Number(value))) return "—";
+      const n = Number(value);
+      return (n > 0 ? "+" : "") + n.toFixed(1) + "%";
+    }
+    function usd(value) {
+      if (value == null || !Number.isFinite(Number(value))) return "—";
+      const n = Number(value);
+      return n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: n >= 100 ? 0 : 2 });
+    }
+    function age(ms) {
+      if (ms == null || !Number.isFinite(Number(ms))) return "no timestamp";
+      if (ms < 1000) return Math.max(0, Math.round(ms)) + "ms";
+      if (ms < 60000) return Math.round(ms / 1000) + "s";
+      return Math.round(ms / 60000) + "m";
+    }
+    function shortAddr(value) {
+      const text = String(value || "");
+      return text.length <= 12 ? text : text.slice(0, 4) + "…" + text.slice(-4);
+    }
+    function tone(value) {
+      if (value == null || !Number.isFinite(Number(value)) || Math.abs(Number(value)) < 1e-12) return "";
+      return Number(value) > 0 ? "lime" : "rose";
+    }
+
+    function paintChrome() {
+      const data = state.data;
+      const paper = document.getElementById("mode-paper");
+      const shadow = document.getElementById("mode-shadow");
+      const kill = document.getElementById("kill-btn");
+      const on = state.connected;
+      paper.disabled = !on;
+      shadow.disabled = !on;
+      kill.disabled = !on;
+      paper.setAttribute("aria-pressed", on && data && data.mode === "paper" ? "true" : "false");
+      shadow.setAttribute("aria-pressed", on && data && data.mode === "shadow" ? "true" : "false");
+      const engaged = on && data && data.killSwitch && data.killSwitch.enabled;
+      kill.textContent = engaged ? "Release kill" : "Kill switch";
+      kill.classList.toggle("danger", !!engaged);
+    }
+
+    function figures(rows) {
+      return `<div class="figures">${rows.map(([label, value, hint, toneName]) =>
+        `<div><span class="label">${esc(label)}</span><strong class="num ${toneName || ""}">${esc(value)}</strong><span class="hint">${esc(hint || "")}</span></div>`
+      ).join("")}</div>`;
+    }
+
+    function render() {
+      if (state.hold) return;
+      const y = window.scrollY;
+      desk.innerHTML = state.connected && state.data ? connectedDesk(state.data) : offlineDesk();
+      paintChrome();
+      window.scrollTo(0, y);
+      const dialog = state.dialog ? document.getElementById(state.dialog) : null;
+      if (dialog && !dialog.open) dialog.showModal();
+    }
+
+    function offlineDesk() {
+      const agents = OFFLINE_AGENTS.map(([name, role]) => `
+        <div class="worker">
+          <div><strong>${esc(name)}</strong><div class="role">${esc(role)}</div></div>
+          <div class="status offline">Offline</div>
+          <p>Not running in this file. No task or score is invented.</p>
+        </div>`).join("");
+      const rules = RULE_DOCS.map(([name, text], i) => `
+        <div class="rule"><strong>${i + 1}. ${esc(name)}</strong><p class="muted">${esc(text)} Limits stay on the server and are not shown while this file is alone.</p></div>`).join("");
+      return `
+        <p class="banner rose">${esc(state.error)}</p>
+        <section id="book">
+          <div class="split-head"><h2 class="serif">The book</h2><span class="kicker">No ledger</span></div>
+          ${figures([
+            ["Paper equity", "—", "No ledger loaded"],
+            ["Cash", "—", "Backend required"],
+            ["Realized", "—", "No closes loaded"],
+            ["Unrealized", "—", "No marks loaded"],
+            ["Daily mark", "—", "Backend required"],
+            ["Win rate", "—", "Not calculated here"],
+            ["Max drawdown", "—", "No snapshots"],
+            ["SOL-USD", "—", "No reference"]
+          ])}
+        </section>
+        <section id="workers">
+          <div class="split-head"><h2 class="serif">Six workers</h2><button class="btn rect" disabled>Run cycle</button></div>
+          ${agents}
+        </section>
+        <section id="markets" class="book">
+          <div>
+            <div class="split-head"><h2 class="serif">Markets</h2><button class="btn rect" disabled>Refresh</button></div>
+            <p class="muted">No live feed. Quotes are not embedded in this file and are not shown as current. There is no sample chart.</p>
+          </div>
+          ${ticket(null, null)}
+        </section>
+        <section class="stack" id="positions"><h2 class="serif">Positions</h2><p class="muted">No paper book is open in this file.</p></section>
+        <section class="stack" id="learning"><h2 class="serif">Learning</h2><p class="muted">No completed trade is stored here, so no expectancy, pattern, or Grok note is shown.</p></section>
+        <section class="stack" id="rules"><h2 class="serif">Six rules</h2>${rules}<p class="muted">Saving is disabled until the server is on this origin.</p></section>
+        <section class="stack" id="audit"><h2 class="serif">Audit</h2><p class="muted">The hash chain lives on the server.</p>${usage()}</section>`;
+    }
+
+    function connectedDesk(data) {
+      const p = data.portfolio || {};
+      const m = data.market || {};
+      const perf = data.performance;
+      const banners = [`<p class="banner">Connected to the GROK SIX server on this origin. Figures below come from that server, not from this file.</p>`];
+      if (m.synthetic) banners.push(`<p class="banner rose">Synthetic fixtures are in the ledger. This is not a public-market view.</p>`);
+      if (m.status === "error") banners.push(`<p class="banner rose">Market feed error: ${esc(m.error || "upstream unavailable")}. Nothing was invented in its place.</p>`);
+      if (m.status === "empty") banners.push(`<p class="banner">The public sources returned no SOL-denominated pool.</p>`);
+      if (data.regime && data.regime.entriesOpen === false) banners.push(`<p class="banner">${esc(data.regime.detail)}</p>`);
+      if (data.killSwitch && data.killSwitch.enabled) banners.push(`<p class="banner rose">Kill switch: ${esc(data.killSwitch.reason)}. New entries are vetoed on the server.</p>`);
+      const agents = (data.agents || []).map((agent) => `
+        <div class="worker">
+          <div><strong>${esc(agent.name)}</strong><div class="role">${esc(agent.role)}</div></div>
+          <div class="status ${esc(agent.status)}">${esc(agent.status)}</div>
+          <p>${esc(agent.activity)} <span class="muted">${esc(agent.lastCompletedTask || "Nothing completed yet.")}</span></p>
+        </div>`).join("");
+      const quotes = data.quotes || [];
+      const rows = quotes.length === 0
+        ? `<p class="muted">No public pools are stored. Refresh asks the server. This file will not draw a stand-in chart.</p>`
+        : `<div style="overflow-x:auto"><table><thead><tr><th>Token</th><th>Price</th><th>1h</th><th>Liquidity</th><th>24h volume</th><th>Age</th></tr></thead><tbody>
+          ${quotes.slice(0, 14).map((item) => `<tr class="click ${item.tokenAddress === state.selected ? "sel" : ""}" data-action="select" data-token="${esc(item.tokenAddress)}">
+            <td><div>${esc(item.symbol)}</div><div class="muted">${esc(shortAddr(item.tokenAddress))} · ${esc(item.dex || "")}</div></td>
+            <td class="num">${item.priceNative == null ? "—" : Number(item.priceNative).toExponential(3)}</td>
+            <td class="${item.changeH1 != null && item.changeH1 < 0 ? "rose" : "lime"}">${pct(item.changeH1)}</td>
+            <td class="num">${usd(item.liquidityUsd)}</td>
+            <td class="num">${usd(item.volumeH24Usd)}</td>
+            <td class="${item.fresh ? "lime" : "rose"}">${age(item.ageMs)}</td>
+          </tr>`).join("")}
+        </tbody></table></div>${chartBlock()}`;
+      const quote = quotes.find((item) => item.tokenAddress === state.selected) || null;
+      const position = (data.positions || []).find((item) => item.tokenAddress === state.selected) || null;
+      const positions = (data.positions || []).length === 0
+        ? `<p class="muted">No open paper positions.</p>`
+        : `<div style="overflow-x:auto"><table><thead><tr><th>Token</th><th>Qty</th><th>Entry</th><th>Mid</th><th>Unrealized</th><th>After costs</th></tr></thead><tbody>
+          ${(data.positions || []).map((item) => `<tr>
+            <td>${esc(item.symbol)}<div class="muted">${item.fresh ? "fresh mark" : "stale mark hidden"}</div></td>
+            <td class="num">${Number(item.quantity).toExponential(3)}</td>
+            <td class="num">${Number(item.avgEntryPriceNative).toExponential(3)}</td>
+            <td class="num">${num(item.marketValueSol)}</td>
+            <td class="num ${tone(item.unrealizedPnlSol)}">${num(item.unrealizedPnlSol)}</td>
+            <td class="num">${num(item.unrealizedAfterCostsSol)}</td>
+          </tr>`).join("")}
+        </tbody></table></div>`;
+      const research = (data.findings || []).filter((f) => f.agentId === "quant" || f.kind === "research").slice(0, 3);
+      const findings = (data.findings || []).slice(0, 8).map((f) => `<article class="finding"><div class="who">${esc(f.agentId)}</div><strong>${esc(f.title)}</strong><p class="muted">${esc(f.summary)}</p></article>`).join("") || `<p class="muted">No shared findings yet.</p>`;
+      const trades = (data.trades || []).length === 0
+        ? `<p class="muted">No closed trade in this server response.</p>`
+        : `<div style="overflow-x:auto"><table><thead><tr><th>Token</th><th>P&amp;L</th><th>Costs</th><th>Why</th></tr></thead><tbody>
+          ${data.trades.slice(0, 8).map((t) => `<tr><td>${esc(t.symbol)}</td><td class="num ${t.realizedPnlSol < 0 ? "rose" : "lime"}">${num(t.realizedPnlSol)}</td><td class="num">${num(t.feesSol, 6)}</td><td>${esc(t.exitReason)}</td></tr>`).join("")}
+        </tbody></table></div>`;
+      const orders = (data.orders || []).slice(0, 5).map((o) => `<div class="finding"><span class="num">${esc((o.createdAt || "").slice(11, 19))}</span> ${esc(o.side)} ${esc(o.symbol)} · ${esc(o.status)}${o.rejectCode ? " · " + esc(o.rejectCode) : ""}</div>`).join("") || `<p class="muted">No orders yet.</p>`;
+      const rules = (state.rulesDraft || []).map((rule, index) => `
+        <div class="rule">
+          <div class="split-head"><strong>${index + 1}. ${esc(rule.name)}</strong>
+            <label class="muted">On <input data-action="rule-enabled" data-index="${index}" type="checkbox" ${rule.enabled ? "checked" : ""}></label></div>
+          <p class="muted">${esc(rule.description)}</p>
+          <div class="rule-grid">${Object.entries(rule.config || {}).map(([key, value]) => `<label class="field">${esc(key)}
+            ${typeof value === "boolean"
+              ? `<input data-action="rule-bool" data-index="${index}" data-key="${esc(key)}" type="checkbox" ${value ? "checked" : ""}>`
+              : `<input data-action="rule-num" data-index="${index}" data-key="${esc(key)}" type="number" value="${esc(value)}">`}
+          </label>`).join("")}</div>
+        </div>`).join("");
+      const audit = (data.audit || []).slice(0, 8).map((e) => `<div class="finding"><span class="num blue">${esc(String(e.hash || "").slice(0, 12))}</span> ${esc(e.action)} · ${esc(e.actor)}</div>`).join("") || `<p class="muted">No audit events yet.</p>`;
+      const grok = data.grok && data.grok.configured ? "Grok is configured on the server." : "Grok is offline on the server. No commentary is invented here.";
+      return `
+        ${banners.join("")}
+        <section id="book">
+          <div class="split-head"><h2 class="serif">The book</h2><span class="kicker">${esc(data.mode || "paper")} mode</span></div>
+          ${figures([
+            ["Paper equity", num(p.equitySol) + " SOL", p.equitySol == null ? "A position has no fresh mark" : "Started " + num(p.startingSol, 2) + " SOL"],
+            ["Cash", num(p.cashSol) + " SOL", "Positions " + num(p.positionsValueSol)],
+            ["Realized", num(p.realizedPnlSol) + " SOL", p.closedTrades ? p.closedTrades + " closed" : "No closed trades", p.closedTrades ? tone(p.realizedPnlSol) : ""],
+            ["Unrealized", num(p.unrealizedPnlSol) + " SOL", "After modeled exit " + num(p.unrealizedAfterCostsSol), tone(p.unrealizedPnlSol)],
+            ["Daily mark", pct(p.dailyPnlPct), num(p.dailyPnlSol) + " SOL", tone(p.dailyPnlSol)],
+            ["Win rate", p.winRate == null ? "—" : pct(p.winRate * 100), perf ? "Expectancy " + num(perf.expectancySol) : "Needs closes"],
+            ["Max drawdown", p.maxDrawdownPct == null ? "—" : pct(-p.maxDrawdownPct), "From equity snapshots"],
+            ["SOL-USD", m.solUsd == null ? "—" : usd(m.solUsd), (m.solUsdSource || "no reference") + " · " + age(m.solUsdAgeMs)]
+          ])}
+        </section>
+        <section id="workers">
+          <div class="split-head"><h2 class="serif">Six workers</h2><button class="btn rect" data-action="agents">Run cycle</button></div>
+          ${agents}
+        </section>
+        <section id="markets" class="book">
+          <div>
+            <div class="split-head"><h2 class="serif">Markets</h2><button class="btn rect" data-action="refresh">Refresh</button></div>
+            <p class="muted">${esc((m.provenance && m.provenance.sources && m.provenance.sources[0] && m.provenance.sources[0].name) || "no source")} · ${m.quoteCount || 0} pools · newest ${age(m.ageMs)}</p>
+            ${rows}
+          </div>
+          ${ticket(quote, position)}
+        </section>
+        <section class="stack" id="positions"><h2 class="serif">Positions</h2>${positions}</section>
+        <section class="stack" id="learning">
+          <div class="split-head"><h2 class="serif">Learning</h2><button class="btn rect" data-action="replay">Replay</button></div>
+          <p>${perf ? "Expectancy " + esc(num(perf.expectancySol)) + " SOL over " + esc(perf.count) + " closes." : "No completed trade, so no pattern is claimed."}</p>
+          ${research.map((f) => `<article class="finding"><strong>${esc(f.title)}</strong><p class="muted">${esc(f.summary)}</p></article>`).join("")}
+          <p class="muted">${esc(grok)} <button class="btn rect" data-action="grok">Ask Grok</button></p>
+          <h2 class="serif" style="margin-top:28px">Findings</h2>
+          ${findings}
+          <h2 class="serif" style="margin-top:28px">History</h2>
+          ${trades}
+          ${orders}
+        </section>
+        <section class="stack" id="rules">
+          <div class="split-head"><h2 class="serif">Six rules</h2><button class="btn solid rect" data-action="save-rules" ${state.rulesDirty ? "" : "disabled"}>Save rules</button></div>
+          ${rules}
+        </section>
+        <section class="stack" id="audit"><h2 class="serif">Audit</h2>${audit}${usage()}</section>`;
+    }
+
+    function ticket(quote, position) {
+      const offline = !state.connected;
+      const blocked = offline || !quote || !quote.fresh;
+      return `<aside class="ticket">
+        <div class="split-head"><h2 class="serif">Ticket</h2><button class="btn" data-action="assumptions">Assumptions</button></div>
+        <p class="muted">Server fills are simulated and can be rejected. This file never reports a fill the server did not return.</p>
+        <div class="split">
+          <button class="btn ${state.side === "buy" ? "solid" : ""}" data-action="side" data-side="buy">Buy</button>
+          <button class="btn ${state.side === "sell" ? "solid" : ""}" data-action="side" data-side="sell">Sell</button>
+        </div>
+        <p>${quote ? esc(quote.symbol) + " · " + (quote.fresh ? "fresh" : "stale") + " · " + age(quote.ageMs) : "No token selected"}</p>
+        ${state.side === "buy"
+          ? `<label class="field">Notional SOL<input id="notional" type="number" min="0" step="0.01" value="${esc(state.notional)}" ${offline ? "disabled" : ""}></label>`
+          : `<label class="field">Quantity<input id="quantity" type="number" min="0" step="any" value="${esc(state.quantity)}" ${offline ? "disabled" : ""}></label>`}
+        <div class="split">
+          <button class="btn" data-action="preview" ${blocked ? "disabled" : ""}>Estimate</button>
+          <button class="btn solid" data-action="submit" ${blocked ? "disabled" : ""}>${state.data && state.data.mode === "shadow" ? "Simulate" : "Submit paper"}</button>
+        </div>
+        ${offline ? `<p class="muted">Trade execution is disabled. Opening this file alone cannot fill, even on paper.</p>` : ""}
+        ${quote && !quote.fresh ? `<p class="rose">This quote is stale, so the ticket will not pretend it can fill.</p>` : ""}
+        ${position ? `<p class="muted">Open ${esc(position.symbol)} · ${Number(position.quantity).toExponential(3)}</p>` : ""}
+        ${state.result ? `<div class="result"><strong>${esc(state.result.title)}</strong><p class="muted">${esc(state.result.message)}</p></div>` : ""}
+      </aside>`;
+    }
+
+    function chartBlock() {
+      if (state.chartError) return `<p class="rose">${esc(state.chartError)}</p>`;
+      if (!state.candles || !state.candles.length) return `<p class="muted">Choose a pool to request candles from the server. If that fails, this space stays empty.</p>`;
+      const candles = state.candles;
+      const w = 640, h = 180, pad = 8;
+      const max = Math.max(...candles.map((c) => c.high));
+      const min = Math.min(...candles.map((c) => c.low));
+      const span = max - min || 1;
+      const slot = (w - pad * 2) / candles.length;
+      const y = (price) => pad + ((max - price) / span) * (h - pad * 2);
+      const marks = candles.map((c, i) => {
+        const x = pad + i * slot;
+        const up = c.close >= c.open;
+        const color = up ? "#d6f25c" : "#ff8d9c";
+        const top = y(Math.max(c.open, c.close));
+        const bot = y(Math.min(c.open, c.close));
+        return `<line x1="${x + 2}" x2="${x + 2}" y1="${y(c.high)}" y2="${y(c.low)}" stroke="${color}" stroke-width="1"/><rect x="${x}" y="${top}" width="4" height="${Math.max(bot - top, 1)}" fill="${color}"/>`;
+      }).join("");
+      return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="180" role="img" aria-label="Candles from the server">${marks}</svg>`;
+    }
+
+    function usage() {
+      return `<p class="usage">This folder is a static presentation. The portrait is assets/video.mp4. Navigation and assumptions work here. Refresh, workers, rules, Grok, and paper tickets run only against a same-origin GROK SIX server that returns JSON. A host that sends this page back for /api is not connected. Live mode cannot be switched on.</p>`;
+    }
+
+    async function readJson(res) {
+      const type = (res.headers.get("content-type") || "").toLowerCase();
+      if (!type.includes("application/json")) throw new Error("response was not JSON");
+      const data = await res.json();
+      if (!data || typeof data !== "object" || Array.isArray(data)) throw new Error("response was not a JSON object");
+      return data;
+    }
+    function isHealth(body) {
+      return body.name === "GROK SIX" && body.liveAvailable === false && (body.mode === "paper" || body.mode === "shadow");
+    }
+    function isDashboard(body) {
+      return body.liveAvailable === false && body.portfolio && typeof body.portfolio === "object" && Array.isArray(body.agents) && Array.isArray(body.quotes);
+    }
+    async function loadDesk() {
+      if (location.protocol === "file:") {
+        state.connected = false;
+        state.data = null;
+        state.candles = null;
+        state.error = "Opened as a local file. The live feed, paper ledger, workers, and Grok stay on the GROK SIX server. This folder does not include quotes or a sample book.";
+        render();
+        return;
+      }
+      try {
+        const healthRes = await fetch("/api/health", { cache: "no-store" });
+        if (!healthRes.ok) throw new Error("Health " + healthRes.status);
+        const health = await readJson(healthRes);
+        if (!isHealth(health)) throw new Error("This origin is not the GROK SIX paper server.");
+        const dashRes = await fetch("/api/dashboard", { cache: "no-store" });
+        if (!dashRes.ok) throw new Error("Dashboard " + dashRes.status);
+        const data = await readJson(dashRes);
+        if (!isDashboard(data)) throw new Error("Dashboard JSON did not match the paper server.");
+        state.data = data;
+        state.connected = true;
+        state.error = null;
+        if (!state.rulesDirty) state.rulesDraft = data.rules || [];
+        if (!state.selected && data.quotes && data.quotes[0]) state.selected = data.quotes[0].tokenAddress;
+      } catch (error) {
+        state.connected = false;
+        state.data = null;
+        state.candles = null;
+        state.error = "Backend required. " + (error instanceof Error ? error.message : "The server did not answer.") + " No market data or agent activity was substituted.";
+      }
+      render();
+      if (state.connected) loadCandles();
+    }
+
+    async function loadCandles() {
+      const quote = state.data && (state.data.quotes || []).find((item) => item.tokenAddress === state.selected);
+      if (!state.connected || !quote || !quote.pairAddress) {
+        state.candles = null;
+        return;
+      }
+      try {
+        const response = await fetch("/api/ohlcv?pair=" + encodeURIComponent(quote.pairAddress), { cache: "no-store" });
+        const body = await response.json();
+        if (!response.ok || !body.ok) {
+          state.candles = null;
+          state.chartError = body.error || body.message || "Candle source failed.";
+        } else {
+          state.candles = body.candles;
+          state.chartError = null;
+        }
+      } catch (error) {
+        state.candles = null;
+        state.chartError = error instanceof Error ? error.message : "Candle request failed.";
+      }
+      render();
+    }
+
+    async function post(url, payload) {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: payload ? { "content-type": "application/json" } : undefined,
+        body: payload ? JSON.stringify(payload) : undefined
+      });
+      const body = await response.json().catch(() => ({}));
+      if (!response.ok && !body.message && !body.code) throw new Error("Request failed (" + response.status + ")");
+      return body;
+    }
+
+    function readInputs() {
+      const notional = document.getElementById("notional");
+      const quantity = document.getElementById("quantity");
+      const reason = document.getElementById("kill-reason");
+      if (notional) state.notional = notional.value;
+      if (quantity) state.quantity = quantity.value;
+      if (reason) state.killReason = reason.value;
+    }
+
+    function resultFrom(body) {
+      const execution = body.assessment && body.assessment.execution;
+      const vetoes = body.assessment && body.assessment.vetoes ? body.assessment.vetoes.map((v) => v.message).join(" ") : "";
+      return {
+        title: body.duplicate ? "Duplicate replay" : (body.order && body.order.status) || (body.assessment && body.assessment.guardian) || body.code || "Result",
+        message: body.message || (body.order && body.order.rejectReason) || vetoes || (execution ? "Modeled impact " + execution.slippageBps.toFixed(1) + " bps · fee " + execution.feeSol.toFixed(6) + " SOL. Fill guarantee: false." : "No fill was applied.")
+      };
+    }
+
+    desk.addEventListener("focusin", (event) => {
+      if (event.target && (event.target.tagName === "INPUT" || event.target.tagName === "TEXTAREA")) state.hold = true;
+    });
+    desk.addEventListener("focusout", () => { state.hold = false; readInputs(); });
+    desk.addEventListener("input", (event) => {
+      const t = event.target;
+      if (t.id === "notional") state.notional = t.value;
+      if (t.id === "quantity") state.quantity = t.value;
+      if (t.dataset.action === "rule-num" && state.rulesDraft) {
+        const rule = state.rulesDraft[Number(t.dataset.index)];
+        rule.config = Object.assign({}, rule.config, { [t.dataset.key]: Number(t.value) });
+        state.rulesDirty = true;
+      }
+    });
+    desk.addEventListener("change", (event) => {
+      const t = event.target;
+      if (!state.rulesDraft) return;
+      if (t.dataset.action === "rule-enabled") {
+        state.rulesDraft[Number(t.dataset.index)].enabled = t.checked;
+        state.rulesDirty = true;
+      }
+      if (t.dataset.action === "rule-bool") {
+        const rule = state.rulesDraft[Number(t.dataset.index)];
+        rule.config = Object.assign({}, rule.config, { [t.dataset.key]: t.checked });
+        state.rulesDirty = true;
+      }
+    });
+
+    document.addEventListener("click", async (event) => {
+      const node = event.target.closest("[data-action]");
+      if (!node) return;
+      const action = node.dataset.action;
+      if (action === "assumptions") {
+        document.getElementById("assumptions").showModal();
+        return;
+      }
+      if (action === "side") {
+        state.side = node.dataset.side;
+        render();
+        return;
+      }
+      if (action === "select") {
+        state.selected = node.dataset.token;
+        state.candles = null;
+        render();
+        loadCandles();
+        return;
+      }
+      if (!state.connected && action !== "close-kill") return;
+      try {
+        if (action === "refresh") {
+          await post("/api/markets/refresh");
+          await loadDesk();
+        } else if (action === "agents") {
+          await post("/api/workers/run");
+          await loadDesk();
+        } else if (action === "replay") {
+          await post("/api/research/replay");
+          await loadDesk();
+        } else if (action === "mode" && node.dataset.mode !== "live") {
+          await post("/api/mode", { mode: node.dataset.mode });
+          await loadDesk();
+        } else if (action === "kill") {
+          if (state.data.killSwitch && state.data.killSwitch.enabled) {
+            await post("/api/kill-switch", { enabled: false, reason: "" });
+            await loadDesk();
+          } else {
+            state.killReason = "";
+            document.getElementById("kill-reason").value = "";
+            document.getElementById("kill-dialog").showModal();
+          }
+        } else if (action === "close-kill") {
+          document.getElementById("kill-dialog").close();
+        } else if (action === "confirm-kill") {
+          readInputs();
+          const enabled = !(state.data.killSwitch && state.data.killSwitch.enabled);
+          if (enabled && state.killReason.trim().length < 3) {
+            state.result = { title: "Reason required", message: "The kill switch was not changed." };
+            render();
+            return;
+          }
+          document.getElementById("kill-dialog").close();
+          await post("/api/kill-switch", { enabled, reason: state.killReason });
+          await loadDesk();
+        } else if (action === "preview" || action === "submit") {
+          readInputs();
+          const quote = (state.data.quotes || []).find((item) => item.tokenAddress === state.selected);
+          if (!quote) return;
+          const payload = state.side === "buy"
+            ? { side: "buy", tokenAddress: quote.tokenAddress, notionalSol: Number(state.notional) }
+            : { side: "sell", tokenAddress: quote.tokenAddress, quantity: state.quantity === "" ? undefined : Number(state.quantity) };
+          if (action === "submit") {
+            payload.idempotencyKey = crypto.randomUUID();
+            payload.reason = "paper ticket from grok-six.html";
+          }
+          const body = await post(action === "preview" ? "/api/orders/preview" : "/api/orders", payload);
+          state.result = resultFrom(body);
+          if (action === "submit") await loadDesk();
+          else render();
+        } else if (action === "save-rules") {
+          await fetch("/api/rules", {
+            method: "PUT",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({ rules: state.rulesDraft.map((rule) => ({ ruleKey: rule.ruleKey, enabled: rule.enabled, config: rule.config })) })
+          });
+          state.rulesDirty = false;
+          await loadDesk();
+        } else if (action === "grok") {
+          const body = await post("/api/grok/commentary", { subject: "latest" });
+          state.result = { title: body.ok ? "Grok" : (body.code || "Grok unavailable"), message: body.text || body.message || "No commentary was returned." };
+          render();
+        }
+      } catch (error) {
+        state.result = { title: "Request failed", message: error instanceof Error ? error.message : "The server did not accept that action." };
+        render();
+      }
+    });
+
+    const video = document.getElementById("portrait");
+    const play = document.getElementById("play");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    function syncPlay() { play.textContent = video.paused ? "Play" : "Pause"; }
+    play.addEventListener("click", () => {
+      if (video.paused) video.play();
+      else video.pause();
+      syncPlay();
+    });
+    video.addEventListener("play", syncPlay);
+    video.addEventListener("pause", syncPlay);
+    syncPlay();
+    video.addEventListener("error", () => {
+      const note = document.createElement("p");
+      note.className = "banner rose";
+      note.textContent = "The portrait file assets/video.mp4 did not load. The poster is still shown. No market data was substituted.";
+      document.body.prepend(note);
+    });
+    if (reduce.matches) {
+      video.pause();
+      syncPlay();
+    } else {
+      video.play().catch(() => syncPlay());
+    }
+    window.addEventListener("error", (event) => {
+      const note = document.createElement("p");
+      note.className = "banner rose";
+      note.textContent = "Page error: " + (event.message || "unknown");
+      document.body.prepend(note);
+    });
+    loadDesk();
+    setInterval(() => { if (state.connected && !state.hold) loadDesk(); }, 8000);
+  </script>
+</body>
+</html>
